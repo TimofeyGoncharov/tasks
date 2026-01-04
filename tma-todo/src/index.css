@@ -1,0 +1,24 @@
+:root {
+  --tma-bg: #0b0f14;
+  --tma-text: #e6eef7;
+  --tma-hint: #7d8a99;
+  --tma-btn: #2ea6ff;
+  --tma-btn-text: #ffffff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--tma-bg);
+  color: var(--tma-text);
+}
+
+.tma-card {
+  background: color-mix(in srgb, var(--tma-bg) 80%, #ffffff 20%);
+  border: 1px solid color-mix(in srgb, var(--tma-hint) 30%, transparent 70%);
+  border-radius: 14px;
+}
