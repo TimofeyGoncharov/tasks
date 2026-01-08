@@ -64,6 +64,14 @@ docker compose up --build
 Открыть в браузере:
 http://localhost:5173
 
+### Подготовка к старту
+
+1. Настройка переменных окружения. Добавить свои токены бота
+
+```bash
+cp .env.example .env
+```
+
 ### Установка в режиме разработки
 
 ```bash
@@ -73,3 +81,36 @@ npm i
 ```bash
 npm run dev
 ```
+
+
+# Запуск как Telegram Mini App (локально)
+
+1. Собрать и запустить preview
+
+```bash
+npm run build
+npm run preview -- --host 0.0.0.0 --port 4173
+```
+
+2. Поднять публичный HTTPS (localtunnel)
+
+```bash
+npm install -g localtunnel
+lt --port 4173
+```
+
+Ты получишь ссылку вида:
+
+https://xxxx.loca.lt
+
+
+3. Обновить кнопку Mini App у бота
+
+```bash
+npm run lt:update
+```
+Вставь ссылку из localtunnel.
+
+4. Открыть приложение в Telegram
+
+Открой Telegram → своего бота → Menu → Открыть Todo
