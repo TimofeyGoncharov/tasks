@@ -82,6 +82,7 @@ npm i
 npm run dev
 ```
 
+# Данный продукт выложен на ресурсе на данном [ресурсе](https://telegram-tasks.netlify.app/)
 
 # Запуск как Telegram Mini App (локально)
 
